@@ -1,1 +1,1 @@
-# Python Slenium Browser Emulator
+# Python Selenium Browser Emulator
