@@ -25,8 +25,17 @@ def lookup(browser, query):
 	except TimeoutException:
 		print("Box or Button not found in google.com")
 
+def go_site(browser):
+	try:
+		first_link = browser.wait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id=\"rso\"]/div/div/div[1]/div/div/h3/a")))
+		first_link.click()
+	except TimeoutException:
+		print("Cannot find first link")
+
 if __name__ == "__main__":
 	browser = init_browser()
 	lookup(browser, "website.com")
+	go_site(browser)
 	time.sleep(5)
 	browser.quit()
+	print("Successfuly completed")
