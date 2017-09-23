@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 sudo apt-get update & sudo apt-get -y upgrade
 sudo apt-get install libxss1 libappindicator1 libindicator7
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -20,8 +20,7 @@ sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
 sudo apt-get install python-pip
 
-sudo apt-get install python-virtualenv
-virtualenv selenium_venv
+python3 -m venv selenium_venv
 source selenium_venv/bin/activate
 
 pip install pyvirtualdisplay selenium
