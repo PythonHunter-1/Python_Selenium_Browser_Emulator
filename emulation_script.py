@@ -34,8 +34,8 @@ def go_site(browser):
 
 if __name__ == "__main__":
 	browser = init_browser()
-	lookup(browser, "website.com")
+	lookup(browser, "https://depannage.alexisgaillac.fr")
 	go_site(browser)
-	time.sleep(5)
+	time.sleep(10)
 	browser.quit()
 	print("Successfuly completed")
