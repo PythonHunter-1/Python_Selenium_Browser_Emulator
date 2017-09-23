@@ -9,6 +9,7 @@ from selenium.common.exceptions import TimeoutException, ElementNotVisibleExcept
 def init_browser():
 	chrome_options = webdriver.ChromeOptions()
 	chrome_options.add_argument('--no-sandbox')
+	chrome_options.add_argument('--headless')
 	browser = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chrome_options)
 	browser.wait = WebDriverWait(browser, 5)
 	return browser
