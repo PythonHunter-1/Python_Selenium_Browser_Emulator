@@ -7,7 +7,9 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, ElementNotVisibleException
 
 def init_browser():
-	browser = webdriver.Chrome()
+	chrome_options = webdriver.ChromeOptions()
+	chrome_options.add_argument('--no-sandbox')
+	browser = webdriver.Chrome('/usr/local/bin/chromedriver', chrome_options=chrome_options)
 	browser.wait = WebDriverWait(browser, 5)
 	return browser
 
