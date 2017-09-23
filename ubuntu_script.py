@@ -33,7 +33,7 @@ def go_site(browser):
 		print("Cannot find first link")
 
 if __name__ == "__main__":
-	display = Display(visible=0, size=(800, 600))
+	display = Display(visible=1, size=(800, 600))
 	display.start()
 	browser = init_browser()
 	lookup(browser, "https://depannage.alexisgaillac.fr")
